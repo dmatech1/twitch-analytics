@@ -1,0 +1,5 @@
+# "data" contains some big and/or private stuff.
+data/
+
+# I don't really know or care what this is.
+.ipynb_checkpoints/
