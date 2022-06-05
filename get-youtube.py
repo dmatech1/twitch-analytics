@@ -39,7 +39,7 @@ while True:
         f"https://youtube.googleapis.com/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&safeSearch=none&type=video&pageToken={urllib.parse.quote_plus(PAGE_TOKEN)}")
 
     # Write it out for later use.
-    with open(f"twitch-analytics/youtube/videos-{page_num}.json", "w") as f:
+    with open(f"data/youtube/videos-{page_num}.json", "w") as f:
         f.write(r.text)
 
     # Process it.
@@ -68,7 +68,7 @@ for c in chunks(video_ids, 10):
         f"https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics%2CtopicDetails%2CfileDetails%2Cstatus&id={urllib.parse.quote_plus(','.join(c))}")
 
     # Write it out for later use.
-    with open(f"twitch-analytics/youtube/details-{page_num}.json", "w") as f:
+    with open(f"data/youtube/details-{page_num}.json", "w") as f:
         f.write(r.text)
 
     page_num += 1
