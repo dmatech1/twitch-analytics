@@ -44,7 +44,8 @@ scope = [
 redirect_url = "http://localhost:3000"
 
 # For the first iteration, I should code this entirely myself using only "requests" and the bare-bones HTTP server.
-# I'll learn more that way.
+# I'll learn more that way.  It might require writing a custom "requests" wrapper like Google did.
+
 
 # https://github.com/singlerider/twitch-python/blob/master/twitch.py
 # https://pytwitcherapi.readthedocs.io/en/latest/_modules/pytwitcherapi/oauth.html
